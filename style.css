@@ -1,0 +1,162 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+.header
+{
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    position: relative;;
+}
+nav
+{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+
+}
+.logo{
+width: 140px;
+}
+.navlinks{
+    padding: 28px 0;
+}
+.navlinks li
+{
+    display: inline-block;
+    margin: 0 15px;
+}
+.navlinks li a{
+    text-decoration: none;
+    color: aliceblue;
+    padding: 5px 0;
+    font-size: large;
+    position: relative;
+}
+.navlinks li a::before
+{
+    content: '';
+    background: #ff3d00;
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: 0.5s;
+}
+.navlinks li a::after
+{
+    content: '';
+    background: #54ff05;
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.navlinks li a:hover::before
+{
+    width: 100%;
+    
+}
+.navlinks li a:hover::after
+{
+    width: 100%;
+}
+.btn{
+    background: #ff3d00;
+    color: rgb(7, 6, 6);
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.content{
+    /* doubt */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 90%;
+    max-width: 900px; 
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: wheat;
+}
+.content h1{
+    font-size: 65px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.content form{
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+}
+.content form input{
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    font-size: 18px;
+}
+.content form button{
+    background: #ff3d00;
+    color:white;
+    padding:15px 40px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.category-list
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+.category
+{
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 61,0,0.15);
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    
+}
+.category img{
+    width: 50px;
+    margin-bottom: 5px;
+    /* position: relative; */
+}
+.back-video{
+    position: absolute;
+    right: 0;bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    
+}
+/* .category p::afterS
+{
+    content: '';
+    background: #54ff05;
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+} */
+.category img:hover
+{
+    transition: 0.5s;
+   width: 100%;
+}
